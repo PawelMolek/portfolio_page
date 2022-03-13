@@ -5,5 +5,6 @@ class Post < ApplicationRecord
   has_rich_text :content
 
   belongs_to :user
-  has_many :comments
+  # because of dependent: :destroy we can delete post with comments without sqlite3 error
+  has_many :comments, dependent: :destroy
 end

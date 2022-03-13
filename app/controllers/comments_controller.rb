@@ -11,4 +11,5 @@ class CommentsController < ApplicationController
   def set_post
     @post = Post.find(params[:post_id])
   end
+
 end
