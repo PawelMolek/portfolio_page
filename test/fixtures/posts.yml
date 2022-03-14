@@ -3,10 +3,11 @@
 one:
   title: MyString
   content: MyText
-  user: one
+  user: pawel
+  user_id: 1
 
 two:
   title: MyString
   content: MyText
   user: pawel
-
+  user_id: 1
