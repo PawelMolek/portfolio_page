@@ -22,6 +22,11 @@
 <!--    form.rich_text_area-->
   </div>
 
+<!--  Active Storage-->
+  <div class="form-group">
+    <%= form.file_field :image %>
+  </div>
+
   <div>
     <%= form.number_field :user_id, id: :friend_user_id, class: "form-control", value: current_user.id, type: :hidden %>
   </div>

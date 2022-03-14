@@ -71,7 +71,8 @@ class PostsController < ApplicationController
   end
 
   # Only allow a list of trusted parameters through.
+  # :image - Active Storage
   def post_params
-    params.require(:post).permit(:title, :content, :user_id)
+    params.require(:post).permit(:title, :content, :user_id, :image)
   end
 end

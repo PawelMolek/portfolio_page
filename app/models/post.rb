@@ -9,4 +9,7 @@ class Post < ApplicationRecord
 
   # because of dependent: :destroy we can delete post with comments without sqlite3 error
   has_many :comments, dependent: :destroy
+
+  #Active Storage
+  has_one_attached :image
 end
