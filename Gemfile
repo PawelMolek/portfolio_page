@@ -14,7 +14,7 @@ gem "bootsnap", require: false
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'better_errors', '~> 2.9', '>= 2.9.1'
 gem 'pry', '~> 0.14.1'
-# gem 'image_processing', '~> 1.12', '>= 1.12.2'
+gem 'image_processing', '~> 1.12', '>= 1.12.2'
 gem 'binding_of_caller', '~> 1.0'
 
 group :development, :test do

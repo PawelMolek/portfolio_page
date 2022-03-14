@@ -7,4 +7,5 @@ class User < ApplicationRecord
   # because of dependent: :destroy we can delete user with posts without sqlite3 error
 
   has_many :posts, dependent: :destroy
+
 end
