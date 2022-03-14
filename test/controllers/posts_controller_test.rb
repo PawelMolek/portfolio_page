@@ -2,10 +2,12 @@ require "test_helper"
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
   setup do
+    sign_in users(:pawel)
     @post = posts(:one)
   end
 
   test "should get index" do
+    sign_out users(:pawel)
     get posts_url
     assert_response :success
   end
@@ -17,13 +19,14 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create post" do
     assert_difference("Post.count") do
-      post posts_url, params: { post: { content: @post.content, title: @post.title, user_id: @post.user_id } }
+      post posts_url, params: { post: { content: @post.content, title: @post.title, id: @post.id } }
     end
 
     assert_redirected_to post_url(Post.last)
   end
 
   test "should show post" do
+    sign_out users(:pawel)
     get post_url(@post)
     assert_response :success
   end
