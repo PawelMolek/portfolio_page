@@ -10,7 +10,7 @@
             <p class="text-dark mb-0"><%= post.content %></p>
           </div>
           <div class="col d-flex justify-content-center" style="max-height: 150px">
-              <%= image_tag(post.image, class: "rounded", size:"128x128") %>
+              <%= image_tag(post.image, class: "rounded", size:"128x128") if post.image.attached?%>
           </div>
         </div>
       </div>
