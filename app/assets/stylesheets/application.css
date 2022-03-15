@@ -14,16 +14,20 @@
  *= require_self
  */
 
-
-
-.h5 {
-    color: black;
+.col {
+    margin-top: 20%;
 }
 
+html, body {
+    height: 100%;
+}
 body {
-    background-color: pink;
+    display: flex;
+    flex-direction: column;
 }
-
-.row {
-    border-top: #B00100;
+.container {
+    flex: 1 0 auto;
+}
+.footer {
+    flex-shrink: 0;
 }

@@ -2,20 +2,15 @@
 
 <% @posts.each do |post| %>
   <%= link_to post, class: 'text-decoration-none' do %>
-    <div class="card mb-3 bg-warning">
-      <div class="card-body">
+    <div class="card mb-3 bg-warning border border-3 border-info">
+      <div class="card-body px-5 ">
         <div class="row">
-          <div class="col h-25">
-            <h5><%= post.title %></h5>
-<!--            card-title mb-1 text-dark-->
+          <div class="col">
+            <h5 class="card-title mb-1 text-dark"><%= post.title %></h5><br/>
             <p class="text-dark mb-0"><%= post.content %></p>
           </div>
-          <div class="col h-25">
-            <!--            <img src="..." class="img-fluid" alt="Responsive image">-->
-            <%#= image_tag post.image, class:"img-fluid float-right", style:"height:50%" %>
-<!--            <div id="image" class="border border-2" style="height: 30px;">-->
-              <%#= image_tag post.image, style:"height:10%" %>
-<!--            </div>-->
+          <div class="col d-flex justify-content-center" style="max-height: 150px">
+              <%= image_tag(post.image, class: "rounded", size:"128x128") %>
           </div>
         </div>
       </div>

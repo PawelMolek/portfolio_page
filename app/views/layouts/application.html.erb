@@ -13,17 +13,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
 
-  <body class="bg-dark text-white">
-    <div class="container">
+  <body class="bg-dark text-white border border-3 border-info">
+    <div class="container border border-3 border-info" style="height: 700px">
 
       <%= render "home/header" %>
 
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
       <%= yield %>
-
       <%= render "home/footer" %>
-
     </div>
   </body>
 </html>
