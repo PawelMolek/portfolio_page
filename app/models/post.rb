@@ -2,8 +2,7 @@ class Post < ApplicationRecord
   validates :title, presence: true, length: { minimum: 5 }
   validates :content, presence: true, length: { minimum: 30 }
 
-  # commented temporaily
-  # has_rich_text :content
+
 
   belongs_to :user
 
