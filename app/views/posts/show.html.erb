@@ -1,8 +1,7 @@
 <%= turbo_stream_from @post  %>
-<div class="border border-3 border-info">
 <%= render @post %>
 <%= render "posts/comments", post: @post %>
-</div>
+
   <div>
   <%= link_to "Edit this post", edit_post_path(@post) %> |
   <%= link_to "Back to posts", posts_path %>
