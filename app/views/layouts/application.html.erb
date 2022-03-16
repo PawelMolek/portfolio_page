@@ -13,23 +13,23 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </head>
 
-<body class="bg-dark text-white">
-<div class="container flex-column">
-  <div class="row h-100 d-flex flex-wrap row-cols-1 ">
-    <div class="col">
-      <div class="col mt-4 align-self-start border border-3 border-info">
-        <%= render "home/header" %>
-      </div>
-      <div class="col mt-5 mb-3 px-5 border border-3 border-info">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-        <%= yield %>
+  <body class="bg-dark text-white">
+    <div class="container flex-column">
+      <div class="row h-100 d-flex flex-wrap row-cols-1 ">
+        <div class="col">
+          <div class="col my-5 pt-1 align-self-start">
+            <%= render "home/header" %>
+          </div>
+          <div class="col mt-5 mb-3 px-5">
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+            <%= yield %>
+          </div>
+        </div>
+        <div class="col align-self-end py-5 mt-auto">
+          <%= render "home/footer" %>
+        </div>
       </div>
     </div>
-    <div class="col align-self-end py-5 mt-auto border border-3 border-info">
-      <%= render "home/footer" %>
-    </div>
-  </div>
-</div>
-</body>
+  </body>
 </html>
