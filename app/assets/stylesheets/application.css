@@ -14,10 +14,6 @@
  *= require_self
  */
 
-.col {
-    margin-top: 20%;
-}
-
 html, body {
     height: 100%;
 }
