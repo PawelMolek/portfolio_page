@@ -1,24 +1,22 @@
 <div id="<%= dom_id post %>">
-  <div class="container">
 
-    <h1 class="text-center py-4"><strong><%= post.title %></strong></h1>
+  <h1 class="text-center py-4"><strong><%= post.title %></strong></h1>
 
-    <div class="img pb-5">
-      <%= image_tag post.image, class: "img rounded mx-auto d-block h-50 w-75" %>
-    </div>
-
-    <div class="row row-cols-2 pb-4">
-      <div class="col-6 w-50 col-md-4">
-        <%= time_tag post.created_at, "data-local": "time-ago" %>
-      </div>
-      <div class="col-6 w-50 text-center col-md-4">
-        <strong><%= pluralize post.comments.count, "comment" %></strong>
-      </div>
-    </div>
-
-    <div class="mr-3 mt-4 mb-4">
-      <%= post.content %>
-    </div>
-
+  <div class="img pb-5">
+    <%= image_tag post.image, class: "img rounded mx-auto d-block h-50 w-75" %>
   </div>
+
+  <div class="row row-cols-2 pb-4">
+    <div class="col-6 w-50 col-md-4">
+      <%= time_tag post.created_at, "data-local": "time-ago" %>
+    </div>
+    <div class="col-6 w-50 text-center col-md-4">
+      <strong><%= pluralize post.comments.count, "comment" %></strong>
+    </div>
+  </div>
+
+  <div class="mr-3 mt-4 mb-4">
+    <%= post.content %>
+  </div>
+
 </div>

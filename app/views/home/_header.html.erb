@@ -1,4 +1,4 @@
-<header class="d-flex justify-content-center bg-dark rounded my-5">
+<header class="d-flex justify-content-center bg-dark rounded my-5 pb-5 border-bottom">
   <ul class="nav nav-pills">
     <li class="nav-item px-3"><%= link_to "Home", posts_path, class: "btn btn-success" %></li>
     <li class="nav-item px-3"><%= link_to "About", posts_path, class: "nav-link link-success" %></li>
@@ -6,8 +6,6 @@
     <% if user_signed_in? %>
       <li class="nav-item px-3"><%= link_to "New post", new_post_path, class: "btn btn-success" %></li>
       <li class="nav-item px-3"><%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-info" %></li>
-    <% else %>
-      <li></li>
     <% end %>
   </ul>
 

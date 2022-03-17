@@ -1,8 +1,12 @@
-<h2>Comments</h2>
-
-<div id="container">
-  <%# Expands to render partial: "comments/comment", collection: post.comments %>
-  <%= render post.comments %>
+<div class="container text-center align-content-center pt-5">
+  <h2>Comments</h2>
+  <div class="row row-cols-1">
+    <div class="col my-5">
+      <%# Expands to render partial: "comments/comment", collection: post.comments %>
+      <%= render post.comments %>
+    </div>
+    <div class="col my-3">
+      <%= render "comments/new", post: post %>
+    </div>
+  </div>
 </div>
-
-<%= render "comments/new", post: post %>
