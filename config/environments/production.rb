@@ -104,6 +104,6 @@ Rails.application.configure do
     read_timeout:         5 }
 
 
-  config.action_mailer.default_url_options = { :host => 'https://tranquil-crag-12303.herokuapp.com/' }
+  config.action_mailer.default_url_options = { :host => 'https://cryptic-depths-75132.herokuapp.com/' }
 
 end
